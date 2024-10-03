@@ -29,14 +29,14 @@ pip install mlflow
 
 # Tracking Experiments
 1. 設置環境
-```python=
+```python =
 import mlflow
 # 設置實驗名稱
 mlflow.set_experiment("Random Forest Experiment")
 ```
 2. 開始運行紀錄
 - **`mlflow.start_run()`是 MLflow 用於開始一個新的運行（run）的函數。每個運行代表一次獨立的實驗，允許你記錄和跟踪該實驗中的所有參數、指標和模型。**
-```python=
+```python =
 import mlflow
 with mlflow.start_run():
     # 記錄參數和指標
@@ -63,7 +63,7 @@ with mlflow.start_run():
     
 3. 記錄模型
 - **`mlflow.log_model()`**
-```python=
+```python =
 mlflow.pytorch.log_model(pytorch_model=your_model, artifact_path='your_model_name')
 ```
 # Practical Application
@@ -85,7 +85,7 @@ mlflow.pytorch.log_model(pytorch_model=your_model, artifact_path='your_model_nam
     </p>
 
 # View result
-```shell=
+```shell =
 mlflow ui --backend-store-uri your_mlflow_url --port your_port
 ```
 <p float="left">
